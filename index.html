@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbfaf7">
+  <meta name="description" content="Harigovind Kuruvelil, electrical engineering student at Western University. Projects in power electronics, embedded systems, power systems, and real-time software.">
+  <title>Harigovind Kuruvelil</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%231a1c1e'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' text-anchor='middle' fill='%23fbfaf7'%3EHK%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="styles.css?v=2">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <main id="main" class="page">
+    <header class="intro column">
+      <h1>Harigovind Kuruvelil</h1>
+      <p class="tagline">BESc Electrical Engineering, Western University. Graduating December 2026.</p>
+      <p>I'm finishing my electrical engineering degree in London, Ontario, and I'm looking for entry-level roles in power systems, embedded systems, IT, or software.</p>
+      <p>Most of my project work has been hands-on: building and debugging circuits, programming microcontrollers, and tracking down faults with an oscilloscope. My capstone was a real-time spatial audio engine for VR, written in C++ in Unreal Engine 5.</p>
+      <p class="contact-links"><a href="mailto:harigovind_31@yahoo.com">harigovind_31@yahoo.com</a><a href="https://www.linkedin.com/in/harigovind-kuruvelil-943b292b0">LinkedIn</a><a href="https://github.com/harikuruvelil">GitHub</a><a href="files/harigovind-kuruvelil-resume.pdf">Résumé (PDF)</a></p>
+    </header>
+
+    <section class="home-section" id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <h3><a href="projects/hybrid-vr-audio.html">Hybrid VR spatial audio engine</a></h3>
+          <p class="when">Capstone, team of two · 2025–2026</p>
+          <p>Sound in VR that behaves properly around doors and walls. I trained and evaluated the model that refines early room reflections, wrote C++ runtime code in Unreal Engine 5 that reacts to scene geometry and listener position, and moved inference onto a worker thread so it couldn't stall the audio callback.</p>
+          <p class="tools">C++, Unreal Engine 5, PyTorch, TensorRT, Meta Quest 3S</p>
+          <a class="thumb" href="projects/hybrid-vr-audio.html" tabindex="-1" aria-hidden="true"><img src="assets/thumbs/capstone.jpg" width="800" height="600" alt="" loading="lazy"></a>
+        </article>
+        <article class="project">
+          <h3><a href="projects/spot-welder-power-supply.html">Spot welder power supply</a></h3>
+          <p class="when">Course project, team · 2025</p>
+          <p>An Arduino-controlled supply that switches high- and low-side MOSFETs through an IR2011 gate driver, designed for a 100&nbsp;A target. I traced the switching and bootstrap faults with a scope and multimeter and found a supply-routing error in the gate-driver circuit. We then adjusted dead time and gate resistance and corrected the PWM timing.</p>
+          <p class="tools">MOSFETs, gate drivers, Arduino, oscilloscope</p>
+          <a class="thumb" href="projects/spot-welder-power-supply.html" tabindex="-1" aria-hidden="true"><img src="assets/thumbs/spot-welder.jpg" width="800" height="600" alt="" loading="lazy"></a>
+        </article>
+        <article class="project">
+          <h3><a href="projects/bldc-motor.html">Radial-flux BLDC motor</a></h3>
+          <p class="when">Course project, team · 2024</p>
+          <p>A three-phase, 9-slot/12-pole outrunner built around a 15&nbsp;V / 5&nbsp;A supply limit. I did the winding layout and material selection, wound and assembled the stator, and tracked down a continuity fault and a rotor-alignment problem. The prototype successfully ran at high RPM during testing.</p>
+          <p class="tools">Electric machines, winding, bench testing</p>
+          <a class="thumb" href="projects/bldc-motor.html" tabindex="-1" aria-hidden="true"><img src="assets/thumbs/bldc-motor.jpg" width="800" height="600" alt="" loading="lazy"></a>
+        </article>
+        <article class="project">
+          <h3><a href="projects/power-flow.html">Power flow and voltage stability</a></h3>
+          <p class="when">Power systems lab · 2025</p>
+          <p>A PowerWorld model of a generator feeding an infinite bus over a 400&nbsp;kV line, stepped from 100 to 700&nbsp;MW. By 700&nbsp;MW the mid-line bus had dropped to 0.962&nbsp;p.u., losses were about 33&nbsp;MW, and the generator had gone from absorbing 50&nbsp;Mvar to supplying 208&nbsp;Mvar.</p>
+          <p class="tools">PowerWorld, power flow analysis</p>
+          <a class="thumb" href="projects/power-flow.html" tabindex="-1" aria-hidden="true"><img src="assets/thumbs/power-flow.svg" width="800" height="600" alt="" loading="lazy"></a>
+        </article>
+        <article class="project">
+          <h3><a href="projects/tof-tracking.html">Time-of-flight ball tracking</a></h3>
+          <p class="when">Real-time embedded systems course · 2026</p>
+          <p>Closed-loop height control for a ball in a tube, on an Arduino Due running uC/OS-II. A time-of-flight sensor measures the ball and a PID loop drives the fan with PWM. I raised the sensing and control rate from 5&nbsp;Hz to 20&nbsp;Hz and tuned the PID gains.</p>
+          <p class="tools">Arduino Due, uC/OS-II, PID, PWM</p>
+          <a class="thumb" href="projects/tof-tracking.html" tabindex="-1" aria-hidden="true"><img src="assets/thumbs/tof.jpg" width="800" height="600" alt="" loading="lazy"></a>
+        </article>
+        <article class="project">
+          <h3><a href="projects/multi-sensor-monitoring.html">Multi-sensor monitoring</a></h3>
+          <p class="when">Two course projects · 2024–2025</p>
+          <p>An Arduino home monitor on a single-layer PCB designed in EAGLE, and a monitoring system on a Cyclone V SoC's ARM Cortex-A9. I fixed grounding and pin-mapping problems on the PCB.</p>
+          <p class="tools">EAGLE, Arduino, Cyclone V SoC, SPI, I²C</p>
+          <a class="thumb" href="projects/multi-sensor-monitoring.html" tabindex="-1" aria-hidden="true"><img src="assets/thumbs/home-monitor.jpg" width="800" height="600" alt="" loading="lazy"></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="home-section column" id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">Work and education</h2>
+      <div class="rows">
+        <div class="row">
+          <p class="label">May 2023 – present</p>
+          <div>
+            <h3>Student Border Services Officer</h3>
+            <p class="org">Canada Border Services Agency, Mississauga</p>
+            <p>I conduct inspections, review travel and immigration documents, and use government systems to process travellers and flag cases that need further examination. The work depends on accurate records, careful handling of sensitive information, and clear reporting to senior officers and partner agencies.</p>
+          </div>
+        </div>
+        <div class="row">
+          <p class="label">Sept 2021 – Dec 2026</p>
+          <div>
+            <h3>BESc, Electrical Engineering</h3>
+            <p class="org">Western University, London, Ontario</p>
+            <p>Graduating December 2026. Relevant courses: real-time embedded systems, microprocessors, power electronics, electric machines, control systems, communication electronics, signal processing, and VLSI.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section column skills" id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <dl class="rows">
+        <div class="row"><dt>Power electronics</dt><dd>MOSFET switching, gate drivers, op-amp signal conditioning, sensor circuits, schematic and PCB layout, electric machines, power flow analysis. PowerWorld, PSCAD, Altium Designer, EAGLE, Micro-Cap.</dd></div>
+        <div class="row"><dt>Embedded systems</dt><dd>Arduino Due and Uno, Cyclone V SoC (ARM Cortex-A9), GPIO, timers, interrupts, PWM, ADC, UART, SPI, I²C, state machines, uC/OS-II. Quartus.</dd></div>
+        <div class="row"><dt>Software</dt><dd>C/C++, Python, MATLAB, Java, Bash. Git, Visual Studio, Linux, Unreal Engine 5.</dd></div>
+        <div class="row"><dt>Bench work</dt><dd>Oscilloscopes, multimeters, function generators, electronic loads, soldering, wiring, and PCB rework.</dd></div>
+        <div class="row"><dt>Learning now</dt><dd>Cadence tools and planar fabrication, in coursework this term.</dd></div>
+      </dl>
+    </section>
+
+    <section class="home-section column" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>Email me at <a href="mailto:harigovind_31@yahoo.com">harigovind_31@yahoo.com</a>. I'm also on <a href="https://www.linkedin.com/in/harigovind-kuruvelil-943b292b0">LinkedIn</a> and <a href="https://github.com/harikuruvelil">GitHub</a>, and my résumé is <a href="files/harigovind-kuruvelil-resume.pdf">here as a PDF</a>.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="page"><p>© <span id="year">2026</span> Harigovind Kuruvelil</p></div></footer>
+</body>
+</html>

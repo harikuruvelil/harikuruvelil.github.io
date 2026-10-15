@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbfaf7">
+  <meta name="description" content="Ball-height control on an Arduino Due running uC/OS-II. A time-of-flight sensor measures where the ball is, and a PID loop sets the fan speed to hold it at the requested height.">
+  <title>Time-of-flight ball tracking · Harigovind Kuruvelil</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%231a1c1e'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' text-anchor='middle' fill='%23fbfaf7'%3EHK%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="../styles.css?v=2">
+  <script src="../site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar"><div class="page"><a class="home" href="../index.html">Harigovind Kuruvelil</a><nav aria-label="Site"><a href="../index.html#projects">Projects</a><a class="optional" href="../index.html#experience">Experience</a><a href="../index.html#contact">Contact</a></nav></div></header>
+  <main id="main" class="page article">
+    <p class="back"><a href="../index.html#projects">← All projects</a></p>
+    <h1>Time-of-flight ball tracking</h1>
+    <p class="meta">Real-time embedded systems (ECE 4460) · 2026</p>
+    <p class="lead">Ball-height control on an Arduino Due running uC/OS-II. A time-of-flight sensor measures where the ball is, and a PID loop sets the fan speed to hold it at the requested height.</p>
+    <figure class="wide"><img src="../assets/tof-controller-upright.jpg" width="1800" height="1350" alt="Controller board with a blue character LCD showing setpoint, distance, and duty cycle, and slide potentiometers below" loading="lazy"><figcaption>The controller during testing. The LCD shows the setpoint (Ref), the time-of-flight reading in millimetres, and the fan duty cycle. The sliders below are the height and PID controls.</figcaption></figure>
+    <h2>Structure</h2>
+    <p>Each job runs as its own uC/OS-II task: reading the sensor, reading the setpoint, updating the display, and driving the fan. Tasks pass data through message queues, and semaphores protect the hardware they share.</p>
+    <h2>What I changed</h2>
+    <p>I raised the sensing and control update rate from 5&nbsp;Hz to 20&nbsp;Hz, which gives the PID loop four times as many corrections per second, and tuned the gains so the ball responds better when the requested height changes.</p>
+    <p>Bringing the hardware up took some debugging too. Oscilloscope measurements and circuit checks helped me find wiring, pin-mapping, and PCB faults.</p>
+    <nav class="pager" aria-label="More projects"><a href="power-flow.html"><span>Previous</span>Power flow and voltage stability</a><a class="next" href="multi-sensor-monitoring.html"><span>Next</span>Multi-sensor monitoring</a></nav>
+  </main>
+  <footer class="site-footer"><div class="page"><p>© <span id="year">2026</span> Harigovind Kuruvelil · <a href="mailto:harigovind_31@yahoo.com">harigovind_31@yahoo.com</a></p></div></footer>
+</body>
+</html>
